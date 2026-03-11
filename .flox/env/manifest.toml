@@ -1,0 +1,56 @@
+## Flox Environment Manifest -----------------------------------------
+##
+##   TRT-LLM Model Conversion Tools
+##
+##   Self-contained Python 3.12 environment with tensorrt_llm 1.1.0,
+##   PyTorch 2.9.0a0, and all deps needed for HuggingFace → TRT-LLM
+##   engine conversion.
+##
+##   Tools: trtllm-build, trtllm-bench, trtllm-eval, trtllm-prune,
+##          trtllm-refit, trtllm-serve, trtexec, trtllm-llmapi-launch
+##
+## -------------------------------------------------------------------
+# Flox manifest version managed by Flox CLI
+version = 1
+
+
+## Install Packages --------------------------------------------------
+[install]
+trtllm-tools.pkg-path = "flox/trtllm-tools"
+trtllm-tools.systems = ["x86_64-linux"]
+
+
+## Environment Variables ---------------------------------------------
+[vars]
+
+
+## Activation Hook ---------------------------------------------------
+[hook]
+# on-activate = '''
+# '''
+
+
+## Profile script ----------------------------------------------------
+[profile]
+common = '''
+  echo "TRT-LLM Tools Environment (tensorrt_llm 1.1.0, Python 3.12)"
+  echo "Available commands: trtllm-build, trtllm-bench, trtllm-eval,"
+  echo "  trtllm-prune, trtllm-refit, trtllm-serve, trtexec"
+'''
+
+
+## Services ---------------------------------------------------------
+[services]
+
+
+## Include ----------------------------------------------------------
+[include]
+
+
+## Build and publish your own packages ------------------------------
+[build]
+
+
+## Other Environment Options -----------------------------------------
+[options]
+systems = ["x86_64-linux"]

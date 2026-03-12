@@ -16,8 +16,9 @@ version = 1
 
 ## Install Packages --------------------------------------------------
 [install]
-trtllm-tools.pkg-path = "flox/trtllm-tools"
+trtllm-tools.store-path = "/nix/store/jxidh5wj543v2lszsh7yj9g5ck1g7vyg-trtllm-tools-2.66.0"
 trtllm-tools.systems = ["x86_64-linux"]
+ninja.pkg-path = "ninja"
 
 
 ## Environment Variables ---------------------------------------------
